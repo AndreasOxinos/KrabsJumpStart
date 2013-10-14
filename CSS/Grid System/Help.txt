@@ -1,0 +1,25 @@
+HELP ON GRID.CSS
+----------------
+
+Classic GRID system
+
+Basic Syntax:
+
+    <div class="container-max">
+        <div class="_row">
+
+            <div class="_col_6">
+                <!-- HALF PORTION OF THE SCREEN -->
+            </div>
+
+            <div class="_col_6">
+                <!-- HALF PORTION OF THE SCREEN -->
+            </div>
+
+        </div>
+    </div>
+
+
+You can nest _cols into _cols to create whatever layout you want.
+
+showGrid class is only for previewing your layout, not recommended to use elsewhere.

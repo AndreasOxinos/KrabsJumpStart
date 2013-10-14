@@ -1,0 +1,249 @@
+﻿.showGrid{
+    outline:1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightgrey;
+}
+
+.container-960 {
+  width: 960px;
+}
+
+.container-1024 {
+  width: 1024px;
+}
+
+.container-1280 {
+  width: 1280px;
+}
+
+.container-max {
+  width: 99.9898989898989% !important;
+}
+
+[class*="container-"] {
+    padding: 0;
+  text-align: center;
+    margin: 0 auto;
+}
+.grid {
+  max-width: 1220px;
+    padding: 0;
+  text-align: center;
+    margin: 0 auto;
+}
+.grid.flex {
+  width: 100%;
+  max-width: 100%;
+    padding: 0 2%;
+}
+._row {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+*[class*="_col_"].alpha {
+  margin-left: 0;
+}
+*[class*="_col_"].omega {
+  margin-right: 0;
+}
+._col_1 {
+  width: 6.6666666666667%;
+}
+._col_2 {
+  width: 15%;
+}
+._col_3 {
+  width: 23.333333333333%;
+}
+._col_4 {
+  width: 31.666666666667%;
+}
+._col_5 {
+  width: 40%;
+}
+._col_6 {
+  width: 48.333333333333%;
+}
+._col_7 {
+  width: 56.666666666667%;
+}
+._col_8 {
+  width: 65%;
+}
+._col_9 {
+  width: 73.333333333333%;
+}
+._col_10 {
+  width: 81.666666666667%;
+}
+._col_11 {
+  width: 90%;
+}
+._col_12 {
+  width: 98.333333333333%;
+}
+*[class*="_col_"] {
+    margin: 0.5em 0.83333333333333%;
+    float: left;
+  display: block;
+}
+.grid img {
+  max-width: 100%;
+  height: auto;
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+* html .clearfix,
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* Visible Grids
+	You have some outline on the grids, so you can see them, dont reccomend on the production to have them on
+*/
+*[class*="span_"].visible {
+  background: #c2c2c2;
+  height: 50px;
+  outline: 1px solid #000;
+}
+/*---------------------------------
+	Responsive Grid Media Queries - 1280, 1024, 768, 480
+	1280-1024 	- desktop (default grid)
+	1024-768 	- tablet landscape
+	768-480 	- tablet 
+	480-less 	- phone landscape & smaller
+-----------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .grid {
+    max-width: 1024px;
+  }
+  .show-desktop {
+    display: block;
+  }
+  .hide-desktop {
+    display: none;
+  }
+  .show-tablet {
+    display: none;
+  }
+  .hide-tablet {
+    display: block;
+  }
+  .show-phone {
+    display: none;
+  }
+  .hide-phone {
+    display: block;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    max-width: 768px;
+  }
+  .show-desktop {
+    display: none;
+  }
+  .hide-desktop {
+    display: block;
+  }
+  .show-tablet {
+    display: block;
+  }
+  .hide-tablet {
+    display: none;
+  }
+  .show-phone {
+    display: none;
+  }
+  .hide-phone {
+    display: block;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .grid *[class*="_col_"] {
+    float: none;
+    width: auto;
+    clear: both;
+    display: block;
+  }
+  /* columns inside of columns */
+  .grid *[class*="_col_"] [class*="_col_"] {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .grid {
+    max-width: 480px;
+  }
+  .show-desktop {
+    display: none;
+  }
+  .hide-desktop {
+    display: block;
+  }
+  .show-tablet {
+    display: block;
+  }
+  .hide-tablet {
+    display: none;
+  }
+  .show-phone {
+    display: none;
+  }
+  .hide-phone {
+    display: block;
+  }
+}
+@media all and (max-width: 480px) {
+  .grid *[class*="_col_"] {
+    float: none;
+    width: auto;
+    clear: both;
+    display: block;
+  }
+  /* columns inside of columns */
+  .grid *[class*="_col_"] [class*="_col_"] {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .grid {
+    max-width: 100%;
+    /*320*/
+  }
+  .show-desktop {
+    display: none;
+  }
+  .hide-desktop {
+    display: block;
+  }
+  .show-tablet {
+    display: none;
+  }
+  .hide-tablet {
+    display: block;
+  }
+  .show-phone {
+    display: block;
+  }
+  .hide-phone {
+    display: none;
+  }
+}
